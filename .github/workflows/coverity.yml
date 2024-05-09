@@ -14,5 +14,6 @@ jobs:
       run: cd cpp_source
     - uses: vapier/coverity-scan-action@v1
       with:
+        project: Template-Repo
         email: ${{ secrets.COVERITY_SCAN_EMAIL }}
         token: ${{ secrets.COVERITY_SCAN_TOKEN }}
