@@ -40,4 +40,15 @@ updates:
         versions: ["4.x", "5.x"]
       # For all packages, ignore all patch updates
       - dependency-name: "*"
-        update-types: ["version-update:semver-patch"] 
+        update-types: ["version-update:semver-patch"]
+  # Enable version updates for Github Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    reviewers:
+      - "codeplaysoftware/security-managers"
