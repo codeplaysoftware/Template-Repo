@@ -1,0 +1,28 @@
+name: Graviton workflow
+
+on:
+  push:
+    branches: [ "graviton" ]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  run-test:
+    name: Run test on graviton instance
+    runs-on: cp-graviton
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+
+      - name: Do something
+        shell: bash
+        run: |
+          uptime
+          uname -a
+          cat /proc/cpuinfo | tail -18
+          free -m
+          sleep 120
+
