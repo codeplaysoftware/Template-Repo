@@ -24,5 +24,6 @@ jobs:
           uname -a
           cat /proc/cpuinfo | tail -18
           free -m
+          sudo apt update
           sleep 120
 
