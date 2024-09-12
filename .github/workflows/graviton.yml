@@ -25,5 +25,16 @@ jobs:
           cat /proc/cpuinfo | tail -18
           free -m
           sudo apt update
-          sleep 120
+          mount
+          echo
+          df -h
+          echo
+          sudo cat /etc/fstab
+          echo
+          sudo ls -l /dev/disk/by-path/
+          echo
+          sudo ls -l /dev/disk/*
+          echo
+          sudo lsblk | grep disk
+          sleep 180
 
