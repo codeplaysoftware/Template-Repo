@@ -26,7 +26,9 @@ jobs:
           free -m
           sudo apt update
           mount
-          echo
+          echo "*** TOOLS INFO ***"
+          sccache --version
+          echo "*** DISK INFO ***"
           df -h
           echo
           sudo cat /etc/fstab
